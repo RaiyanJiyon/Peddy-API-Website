@@ -29,9 +29,14 @@
             }
         }
     </script>
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body class="font-lato">
+    <!-- header container starts here -->
     <header class="w-11/12 mx-auto mt-4">
         <!-- navbar -->
         <div class="navbar bg-base-100">
@@ -77,13 +82,15 @@
             <div class="hero-content text-center">
                 <div class="md:w-1/2">
                     <h3 class="text-lg text-[#13131399] font-semibold">
-                        Bringing Families Together ❤️‍🔥 
+                        Bringing Families Together ❤️‍🔥
                     </h3>
                     <h1 class="text-5xl font-extrabold mt-4">
                         Your Path to Adoption Starts Here
                     </h1>
                     <p class="py-6">
-                        Find your new furry best friend! Browse adoptable pets, learn about our adoption process, and discover how you can give a loving home to a deserving animal. Start your adoption journey today!
+                        Find your new furry best friend! Browse adoptable pets, learn about our adoption process, and
+                        discover how you can give a loving home to a deserving animal. Start your adoption journey
+                        today!
                     </p>
                     <button class="btn bg-[#0E7A81] text-white font-bold">View More</button>
 
@@ -94,18 +101,64 @@
             </div>
         </div>
     </header>
+    <!-- header container ends here -->
+
+    <!-- main container starts here -->
     <main class="w-11/12 mx-auto mt-12">
         <!-- Adapt content section -->
         <section class="md:w-1/2 mx-auto text-center">
             <h2 class="text-3xl font-extrabold mt-4">
-                Adopt  Your  Best Friend
+                Adopt Your Best Friend
             </h2>
             <p class="py-6">
-                Peddy connects loving families with adorable pets in need of homes. We're dedicated to facilitating happy adoptions and providing support throughout the process.
+                Peddy connects loving families with adorable pets in need of homes. We're dedicated to facilitating
+                happy adoptions and providing support throughout the process.
             </p>
         </section>
+
+        <!-- buttons section -->
+        <section id="button"></section>
     </main>
-    <footer></footer>
+    <!-- main container ends here -->
+
+    <!-- footer container starts here -->
+    <footer class="footer bg-[#131313] text-base-content p-10 mt-6 text-[#FFFFFFE6]">
+        <div class="w-11/12 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-36">
+            <nav class="flex flex-col space-y-4">
+                <h6 class="flex text-xl font-extrabold gap-2">
+                    <img src="images/logo.webp" alt="">
+                    <span class="text-white">Peddy</span>
+                </h6>
+                <a class="text-[#FFFFFF99] link link-hover">Location: av. Washington 165, NY CA 54003</a>
+                <a class="text-[#FFFFFF99] link link-hover">Phone: +31 85 964 47 25</a>
+                <a class="text-[#FFFFFF99] link link-hover">Email: info@yourdomain.com</a>
+                <a class="text-[#FFFFFF99] link link-hover">Openings hours: 9.00 AM - 5.00 PM</a>
+
+                <!-- icons -->
+                <div class="space-x-4 text-2xl">
+                    <i class="fa-brands fa-facebook cursor-pointer"></i>
+                    <i class="fa-brands fa-x-twitter cursor-pointer"></i>
+                    <i class="fa-brands fa-youtube cursor-pointer"></i>
+                    <i class="fa-brands fa-instagram cursor-pointer"></i>
+                </div>
+            </nav>
+            <nav class="flex flex-col space-y-4">
+                <h6 class="text-xl font-extrabold">Useful Links</h6>
+                <a class="text-[#FFFFFF99] link link-hover">Home</a>
+                <a class="text-[#FFFFFF99] link link-hover">About us</a>
+                <a class="text-[#FFFFFF99] link link-hover">Animals</a>
+                <a class="text-[#FFFFFF99] link link-hover">Foundation</a>
+                <a class="text-[#FFFFFF99] link link-hover">Contact</a>
+            </nav>
+            <nav class="flex flex-col space-y-4">
+                <h6 class="text-xl font-extrabold">Drop a Message</h6>
+                <input type="text" placeholder="Enter your email"
+                    class="input input-bordered input-md w-full bg-[#FFFFFF0D]" />
+                <button class="btn bg-[#0E7A81] text-white font-bold border-none">Subscribe</button>
+            </nav>
+        </div>
+    </footer>
+    <!-- footer container ends here -->
 </body>
 
 </html>
