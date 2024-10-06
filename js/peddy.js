@@ -19,7 +19,7 @@ const displayPets = (pets) => {
         cardsContainer.classList.add('hidden');
         return;
     }
-    
+
     noSearchMessage.classList.add('hidden');
     cardsContainer.classList.remove('hidden');
 
@@ -248,3 +248,11 @@ const displayPetDetails = (petData) => {
 
 loadPets();
 loadButtons();
+
+// View more button to pet cards section scroll
+const viewMoreBtn = document.getElementById('view-more-btn');
+const petCardsSection = document.getElementById('pet-cards-section');
+
+viewMoreBtn.addEventListener('click', () => {
+    petCardsSection.scrollIntoView({ behavior: 'smooth' });
+})
