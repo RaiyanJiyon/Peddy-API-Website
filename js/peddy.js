@@ -125,6 +125,12 @@ const displayButton = (category) => {
     categoryButton.textContent = category.category;
 
     categoryButton.addEventListener("click", async () => {
+        const allButtons = buttonContainer.querySelectorAll('button');
+        allButtons.forEach(button => button.classList.remove('bg-[#e6f1f2]', 'rounded-[120px]', 'font-bold'));
+
+        // Apply the green background to the clicked button
+        categoryButton.classList.add('bg-[#e6f1f2]', 'rounded-[120px]', 'font-bold');
+
         await categoryWiseButton(category.category);
     });
 
@@ -141,6 +147,7 @@ const displayButton = (category) => {
 // category buttons
 const categoryWiseButton = async (categoryButtonType) => {
     loadingSpinner(true);
+    
 
     const cardsContainer = document.getElementById("cards-container");
     const likeImageContainer = document.getElementById("like-image-container");
