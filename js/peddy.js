@@ -280,5 +280,20 @@ const loadingSpinner = (isLoading) => {
     
 }
 
+// sorting function
+const sortPetByPrice = (pets) => {
+    const sort = pets.sort((firstPrice, secondPrice) => secondPrice.price - firstPrice.price);
+    displayPets(sort);
+}
+
+const sortedButton = async () => {
+    const res = await fetch('https://openapi.programming-hero.com/api/peddy/pets');
+    const data = await res.json();
+    const pets = data.pets;
+    sortPetByPrice(pets);
+}
+
+
+
 loadPets();
 loadButtons();
