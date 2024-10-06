@@ -126,7 +126,8 @@
             <h4 class="text-xl font-extrabold">
                 Best Deal For you
             </h4>
-            <button onclick="sortedButton()" id="sort-btn" class="btn bg-[#0E7A81] text-white font-bold">Sort by Price</button>
+            <button onclick="sortedButton()" id="sort-btn" class="btn bg-[#0E7A81] text-white font-bold">Sort by
+                Price</button>
         </section>
 
         <!-- spinner -->
@@ -158,7 +159,7 @@
             </div>
         </section>
 
-        <!-- modal -->
+        <!-- detail modal -->
         <section>
             <!-- Open the modal using ID.showModal() method -->
             <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
@@ -229,6 +230,24 @@
                             <button class="btn bg-[#0E7A8133] text-[#0E7A81] font-extrabold w-full">Cancel</button>
                         </form>
                     </div>
+                </div>
+            </dialog>
+        </section>
+
+        <!-- adopt modal -->
+        <section>
+            <!-- Open the modal using ID.showModal() method -->
+            <!-- <button class="btn" onclick="my_modal_4.showModal()">open modal</button> -->
+            <dialog id="my_modal_4" class="modal modal-bottom sm:modal-middle">
+                <div class="modal-box pb-10">
+                    <div class="w-1/2 mx-auto">
+                        <img src="images/handshake.jpg" alt="">
+                    </div>
+                    <h3 class="text-4xl font-extrabold text-center">Congrats</h3>
+                    <p class="py-4 text-center">
+                        Adoption Process is Start For your Pet
+                    </p>
+                    <h3 id="countdown" class="text-5xl font-extrabold text-center">3</h3>
                 </div>
             </dialog>
         </section>
