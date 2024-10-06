@@ -10,8 +10,18 @@ const loadPets = async () => {
 
 // display pets function
 const displayPets = (pets) => {
+    const noSearchMessage = document.getElementById('no-search-message');
     const cardsContainer = document.getElementById("cards-container");
     cardsContainer.textContent = "";
+
+    if (pets.length === 0) {
+        noSearchMessage.classList.remove('hidden');
+        cardsContainer.classList.add('hidden');
+        return;
+    }
+    
+    noSearchMessage.classList.add('hidden');
+    cardsContainer.classList.remove('hidden');
 
     pets.forEach((pet) => {
         const card = document.createElement("div");

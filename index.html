@@ -118,7 +118,8 @@
 
         <!-- buttons section -->
         <section id="button-container"
-            class="mt-8 grid grid-cols-2 sm:grid-cols-4 md:flex justify-between gap-6 md:gap-0"></section>
+            class="mt-8 grid grid-cols-2 sm:grid-cols-4 md:flex justify-between gap-6 md:gap-0">
+        </section>
 
         <!-- sort section -->
         <section class="flex justify-between mt-8">
@@ -133,8 +134,42 @@
             <div id="cards-container" class="col-span-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             </div>
 
+            <div id="no-search-message" class="hidden col-span-3 card bg-[#13131308] pb-10">
+                <div class="card-body space-y-4">
+                    <div class="flex justify-center pt-12">
+                        <img src="images/error.webp" alt="error image">
+                    </div>
+                    <h2 class="text-3xl font-bold text-center">
+                        No Information Available
+                    </h2>
+                    <p class="text-[#706F6F] text-center">
+                        It is a long established fact that a reader will be distracted by the readable content of a page
+                        when looking at its layout. The point of using Lorem Ipsum is that it has a.
+                    </p>
+                </div>
+            </div>
+
             <div id="like-image-container" class="card border border-[#CFCFCF] p-4">
             </div>
+        </section>
+
+        <!-- no card item message section -->
+        <section>
+            <!-- <div id="no-search-message" class="hidden card bg-[#13131308] border border-red-500">
+                <div class="card-body space-y-4">
+                    <div class="flex justify-center pt-12">
+                        <img src="images/error.webp" alt="error image">
+                    </div>
+                    <h2 class="text-3xl font-bold text-center">
+                        No Information Available
+                    </h2>
+                    <p class="text-[#706F6F] text-center">
+                        It is a long established fact that a reader will be distracted by the readable content of a page
+                        when looking at its layout. The point of using Lorem Ipsum is that it has a.
+                    </p>
+                </div>
+            </div> -->
+        </section>
         </section>
 
         <!-- modal -->
@@ -198,8 +233,10 @@
 
                     <h3 class="font-bold pt-2">Details Information</h3>
                     <p class="py-4 text-[#706F6F]">
-                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
-                        The point of using is that it has a more-or-less normal distribution of letters, as opposed to using.
+                        It is a long established fact that a reader will be distracted by the readable content of a page
+                        when looking at its layout.
+                        The point of using is that it has a more-or-less normal distribution of letters, as opposed to
+                        using.
                     </p>
                     <div class="modal-action">
                         <form method="dialog" class="w-full">
