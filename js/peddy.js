@@ -143,7 +143,9 @@ const categoryWiseButton = async (categoryButtonType) => {
     loadingSpinner(true);
 
     const cardsContainer = document.getElementById("cards-container");
+    const likeImageContainer = document.getElementById("like-image-container");
     cardsContainer.classList.add('hidden');
+    likeImageContainer.classList.add('hidden');
 
     const res = await fetch(`https://openapi.programming-hero.com/api/peddy/category/${categoryButtonType}`);
     const data = await res.json();
@@ -152,6 +154,7 @@ const categoryWiseButton = async (categoryButtonType) => {
     setTimeout(() => {
         displayPets(categoryData);
         cardsContainer.classList.remove('hidden');
+        likeImageContainer.classList.remove('hidden');
         loadingSpinner(false);
     }, 2000);
 };
