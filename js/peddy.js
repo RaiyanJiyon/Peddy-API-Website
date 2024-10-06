@@ -57,7 +57,7 @@ const displayPets = (pets) => {
 
                 <!-- buttons functionalities -->
                 <div class="flex justify-between items-center gap-1 md:gap-0 pb-5">
-                    <button class="btn bg-white border border-[#0E7A8126]">
+                    <button onclick="likeButton('${pet.petId}', '${pet.image}')" class="btn bg-white border border-[#0E7A8126]">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="size-6">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -103,6 +103,23 @@ const displayButton = (category) => {
     categoryButton.appendChild(buttonText);
 
     buttonContainer.append(categoryButton);
+}
+
+// like button function
+const likeButton = (petId, image) => {
+    console.log('click on', petId, image);
+    const likeImageContainer = document.getElementById('like-image-container');
+
+    const imageWrapper = document.createElement('div');
+    imageWrapper.classList.add('aspect-square', 'relative');
+
+    const likeImage = document.createElement('img');
+    likeImage.src = image;
+    likeImage.alt = `${image} image`;
+    likeImage.classList.add('rounded-lg');
+
+    imageWrapper.appendChild(likeImage);
+    likeImageContainer.appendChild(imageWrapper);
 }
 
 loadPets();
