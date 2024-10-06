@@ -13,8 +13,7 @@ const loadPets = async () => {
     }, 2000);
 };
 
-// display pets function
-
+// display pets
 const displayPets = (pets) => {
     const noSearchMessage = document.getElementById('no-search-message');
     const cardsContainer = document.getElementById("cards-container");
@@ -171,16 +170,11 @@ const categoryWiseButton = async (categoryButtonType) => {
 const likeButton = (petId, image) => {
     const likeImageContainer = document.getElementById("like-image-container");
 
-    const imageWrapper = document.createElement("div");
-    imageWrapper.classList.add("aspect-square", "relative");
-
     const likeImage = document.createElement("img");
     likeImage.src = image;
     likeImage.alt = `${image} image`;
     likeImage.classList.add("rounded-lg");
-
-    imageWrapper.appendChild(likeImage);
-    likeImageContainer.appendChild(imageWrapper);
+    likeImageContainer.appendChild(likeImage);
 };
 
 // show modal function
