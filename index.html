@@ -39,7 +39,7 @@
     <!-- header container starts here -->
     <header class="w-11/12 mx-auto mt-4">
         <!-- navbar -->
-        <div class="navbar bg-base-100">
+        <navbar class="navbar bg-base-100">
             <div class="navbar-start">
                 <div class="dropdown">
                     <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -68,14 +68,12 @@
                     <li><a>Contact</a></li>
                 </ul>
             </div>
-            <div class="navbar-end cursor-pointer">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="size-8 hover:bg-gray-300 rounded-full">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                </svg>
+            <div class="navbar-end">
+                <div class="cursor-pointer">
+                    <img class="w-3/4" src="images/user.png" alt="">
+                </div>
             </div>
-        </div>
+        </navbar>
 
         <!-- hero -->
         <div class="hero mt-2">
@@ -104,7 +102,7 @@
     <!-- header container ends here -->
 
     <!-- main container starts here -->
-    <main class="w-11/12 mx-auto mt-12">
+    <main id="main-container" class="w-11/12 mx-auto mt-12">
         <!-- Adapt content section -->
         <section class="md:w-1/2 mx-auto text-center">
             <h2 class="text-3xl font-extrabold mt-4">
@@ -237,7 +235,6 @@
         <!-- adopt modal -->
         <section>
             <!-- Open the modal using ID.showModal() method -->
-            <!-- <button class="btn" onclick="my_modal_4.showModal()">open modal</button> -->
             <dialog id="my_modal_4" class="modal modal-bottom sm:modal-middle">
                 <div class="modal-box pb-10">
                     <div class="w-1/2 mx-auto">
