@@ -129,6 +129,11 @@
             <button class="btn bg-[#0E7A81] text-white font-bold">Sort by Price</button>
         </section>
 
+        <!-- spinner -->
+        <div id="spinner" class="hidden text-center mt-4">
+            <span class="loading loading-bars loading-lg"></span>
+        </div>
+
         <!-- pet cards section -->
         <section id="pet-cards-section" class="mt-10 grid grid-cols-4 gap-6">
             <div id="cards-container" class="col-span-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -143,33 +148,14 @@
                         No Information Available
                     </h2>
                     <p class="text-[#706F6F] text-center">
-                        It is a long established fact that a reader will be distracted by the readable content of a page
-                        when looking at its layout. The point of using Lorem Ipsum is that it has a.
+                        We're sorry, but your search didn't return any results. Please check your search term or try
+                        again later.
                     </p>
                 </div>
             </div>
 
             <div id="like-image-container" class="card border border-[#CFCFCF] p-4">
             </div>
-        </section>
-
-        <!-- no card item message section -->
-        <section>
-            <!-- <div id="no-search-message" class="hidden card bg-[#13131308] border border-red-500">
-                <div class="card-body space-y-4">
-                    <div class="flex justify-center pt-12">
-                        <img src="images/error.webp" alt="error image">
-                    </div>
-                    <h2 class="text-3xl font-bold text-center">
-                        No Information Available
-                    </h2>
-                    <p class="text-[#706F6F] text-center">
-                        It is a long established fact that a reader will be distracted by the readable content of a page
-                        when looking at its layout. The point of using Lorem Ipsum is that it has a.
-                    </p>
-                </div>
-            </div> -->
-        </section>
         </section>
 
         <!-- modal -->
@@ -290,6 +276,7 @@
 
     <!-- script -->
     <script src="./js/peddy.js"></script>
+    <script src="./js/view-more.js"></script>
 </body>
 
 </html>

@@ -1,20 +1,27 @@
 // load pets function
 const loadPets = async () => {
+    loadingSpinner(true);
+
     const res = await fetch(
         "https://openapi.programming-hero.com/api/peddy/pets"
     );
     const data = await res.json();
     const pets = data.pets;
-    displayPets(pets);
+
+    setTimeout(() => {
+        displayPets(pets);
+    }, 2000);
 };
 
 // display pets function
+
 const displayPets = (pets) => {
     const noSearchMessage = document.getElementById('no-search-message');
     const cardsContainer = document.getElementById("cards-container");
     cardsContainer.textContent = "";
-
+    
     if (pets.length === 0) {
+        loadingSpinner(false);
         noSearchMessage.classList.remove('hidden');
         cardsContainer.classList.add('hidden');
         return;
@@ -92,9 +99,11 @@ const displayPets = (pets) => {
                 </div>
             </div>
         `;
-
+        
         cardsContainer.append(card);
     });
+
+    loadingSpinner(false) 
 };
 
 // load buttons function
@@ -124,17 +133,27 @@ const displayButton = (category) => {
     categoryIcon.alt = `${category.category} icon`;
     categoryIcon.style.width = "20px";
     categoryIcon.style.height = "20px";
-    categoryButton.prepend(categoryIcon); // Add icon before text
+    categoryButton.prepend(categoryIcon);
 
     buttonContainer.appendChild(categoryButton);
 };
 
 // category buttons
 const categoryWiseButton = async (categoryButtonType) => {
+    loadingSpinner(true);
+
+    const cardsContainer = document.getElementById("cards-container");
+    cardsContainer.classList.add('hidden');
+
     const res = await fetch(`https://openapi.programming-hero.com/api/peddy/category/${categoryButtonType}`);
     const data = await res.json();
     const categoryData = data.data;
-    displayPets(categoryData);
+
+    setTimeout(() => {
+        displayPets(categoryData);
+        cardsContainer.classList.remove('hidden');
+        loadingSpinner(false);
+    }, 2000);
 };
 
 // like button function
@@ -246,13 +265,17 @@ const displayPetDetails = (petData) => {
     my_modal_5.showModal();
 };
 
+
+const loadingSpinner = (isLoading) => {
+    const spinner = document.getElementById('spinner');
+
+    if (isLoading) {
+        spinner.classList.remove('hidden');
+    } else {
+        spinner.classList.add('hidden');
+    }
+    
+}
+
 loadPets();
 loadButtons();
-
-// View more button to pet cards section scroll
-const viewMoreBtn = document.getElementById('view-more-btn');
-const petCardsSection = document.getElementById('pet-cards-section');
-
-viewMoreBtn.addEventListener('click', () => {
-    petCardsSection.scrollIntoView({ behavior: 'smooth' });
-})
