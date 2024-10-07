@@ -83,7 +83,7 @@ const displayPets = (pets) => {
                 <div class="divider text-[#1313131A]"></div>
 
                 <!-- buttons functionalities -->
-                <div class="flex justify-between items-center gap-1 md:gap-0 pb-5">
+                <div class="flex justify-between items-center gap-1 md:gap-2 lg:gap-1 pb-5">
                     <button onclick="likeButton('${pet.petId}', '${pet.image}')" class="btn bg-white border border-[#0E7A8126]">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="size-6">
@@ -296,6 +296,7 @@ const sortedButton = async () => {
 let count = 3
 // adopt button modal function
 const adoptModal = (button) => {
+    const adoptBtn = document.getElementById('adopt-btn');
     const myModal = document.getElementById('my_modal_4');
     const countdown = document.getElementById('countdown');
 
@@ -312,6 +313,8 @@ const adoptModal = (button) => {
         if (count === 0) {
             clearInterval(countDownNumber);
             myModal.close();
+
+            button.textContent = 'Adopted';
         }
     }, 1000);
 }
