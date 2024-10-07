@@ -76,7 +76,7 @@ const displayPets = (pets) => {
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                     </svg>
-                    <p class="text-[#131313B3]">Price : ${pet.price || "Not available"}</p>
+                    <p class="text-[#131313B3]">Price : ${pet.price || "Not available"}$</p>
                 </div>
 
                 <!-- divider -->
@@ -138,8 +138,8 @@ const displayButton = (category) => {
     const buttonIcon = document.createElement("img");
     buttonIcon.src = category.category_icon;
     buttonIcon.alt = `${category.category} icon`;
-    buttonIcon.style.width = "20px";
-    buttonIcon.style.height = "20px";
+    buttonIcon.style.width = "30px";
+    buttonIcon.style.height = "30px";
     categoryButton.prepend(buttonIcon);
 
     buttonContainer.appendChild(categoryButton);
@@ -183,7 +183,7 @@ const likeButton = (petId, image) => {
     likeImageContainer.appendChild(likeImage);
 };
 
-// show modal function
+// load modal function
 const openModal = async (petId) => {
     try {
         const res = await fetch(`https://openapi.programming-hero.com/api/peddy/pet/${petId}`);
@@ -240,7 +240,7 @@ const displayPetDetails = (petData) => {
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                             </svg>
-                            <p class="text-[#131313B3]">Price : ${petData.price || "Not available"}</p>
+                            <p class="text-[#131313B3]">Price : ${petData.price || "Not available"}$</p>
                         </div>
                         <div class="flex gap-2">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">

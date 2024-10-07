@@ -3,17 +3,17 @@ Welcome to Assignment 6 !!! In this assignment You have to create a pet adoption
 
 Key Requirements
 
-➤ 1. Navbar ✔️
+➤ 1. Navbar 🟢
 ● Implement the navbar as per the Figma design. ✔️
 ● Ensure it is responsive across Desktop, Tablet, and Mobile devices. ✔️
 ● The navbar should collapse into a mobile menu on smaller screens. ✔️
 
-➤ 2. Banner Section
+➤ 2. Banner Section 🟢
 ● Design the banner section as per Figma design. ✔️
 ● Include a "View More" button that, when clicked, scrolls down to the “Adopt Your Best Friend” section. ✔️
 ● Ensure the banner is fully responsive. ✔️
 
-➤ 3. Adopt Your Best Friend Section
+➤ 3. Adopt Your Best Friend Section 🟢
 Left Side:
 ● Display 4 dynamic categories below the section title and subtitle, fetched from the provided API. ✔️
 ● Add a "Sort By Price" button on the right, with a subtitle on the left, as per the design. ✔️
@@ -33,8 +33,8 @@ Each card must display the following:
 If any field is missing from the API response, handle it by displaying a placeholder or meaningful message. ✔️
 
 Right Side:
-● Clicking the "Like" button should add the pet's thumbnail to the right-side grid.
-● Display a 2-column layout for liked pet thumbnails. 
+● Clicking the "Like" button should add the pet's thumbnail to the right-side grid. ✔️
+● Display a 2-column layout for liked pet thumbnails. ✔️
 
 ➤ 4. Modal Window
 ● When the "Details" button is clicked, open a modal that displays all pet information like figma ✔️
